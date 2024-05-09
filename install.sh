@@ -26,18 +26,16 @@ _install() {
         "$PREFIX/share"
 }
 
-_cleanup() {
-    _msg "Clearing cache ..."
-    rm  ~/.cache/plasma-svgelements-Materia* \
-        ~/.cache/plasma_theme_Materia*.kcache
-    _msg "Done!"
-}
+# _cleanup() {
+#     _msg "Clearing cache ..."
+#     rm  ~/.cache/plasma-svgelements-Materia* \
+#         ~/.cache/plasma_theme_Materia*.kcache
+#     _msg "Done!"
+# }
 
-trap _cleanup EXIT HUP INT TERM
+# trap _cleanup EXIT HUP INT TERM
 
 _uninstall
-_uninstall
-
 
 if [ "$uninstall" = "false" ]; then
     _install
